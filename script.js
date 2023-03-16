@@ -220,7 +220,7 @@ $(document).ready(function () {
     setLabels(data.labels);
 
     var myLineChart = new Chart(ctx).Line(data, options);
-  }, 1000);
+  }, 10000);
 
   function setLabels(labels) {
     let newArray = LebelsArray();
