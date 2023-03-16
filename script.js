@@ -156,7 +156,7 @@ $(document).ready(function () {
     let previousLevelsArray = LebelsArray();
 
     let previousData = previousLevelsArray.map(function (el, i) {
-      return i * Math.random();
+      return Math.floor(Math.random() * 30) + 1;
     });
 
     return previousData;
@@ -165,7 +165,7 @@ $(document).ready(function () {
     let previousLevelsArray = LebelsArray();
     let updateData = [];
     for (let i = previousLevelsArray.length; i > 0; i--) {
-      updateData.push(i * Math.random());
+      updateData.push(Math.floor(Math.random() * 30) + 1);
     }
 
     return updateData;
@@ -235,7 +235,11 @@ $(document).ready(function () {
   }
 
   function setData(data) {
-    data.push(Math.floor(Math.random() * 30) + 1);
+    // data.push(Math.floor(Math.random() * 20) + 1);
+    // data.shift();
+    const max = 30; // set the maximum value to 30
+    const randomNumber = Math.floor(Math.random() * max) + 1; // generate a random number between 1 and 30
+    data.push(randomNumber);
     data.shift();
   }
 });
