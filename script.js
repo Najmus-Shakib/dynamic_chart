@@ -112,7 +112,7 @@ $(document).ready(function () {
   function LebelsArray() {
     const endEmployee = 40;
     const numberOfEmployee = 30;
-    const timeInterval = 10;
+    const timeInterval = 1;
 
     let date = new Date();
     let hours = date.getHours();
@@ -220,7 +220,7 @@ $(document).ready(function () {
     setLabels(data.labels);
 
     var myLineChart = new Chart(ctx).Line(data, options);
-  }, 10000);
+  }, 1000);
 
   function setLabels(labels) {
     let newArray = LebelsArray();
